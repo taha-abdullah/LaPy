@@ -11,7 +11,7 @@ on:
     paths:
       - '**.py'
   workflow_dispatch:
-
+  
 jobs:
   pytest:
     timeout-minutes: 30
@@ -21,7 +21,7 @@ jobs:
         os: [ubuntu, macos, windows]
         python-version: [3.8, 3.9, "3.10", "3.11"]
     name: ${{ matrix.os }} - py${{ matrix.python-version }}
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: lapy_runner
     defaults:
       run:
         shell: bash
